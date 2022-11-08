@@ -1,17 +1,22 @@
 // Topic: Decision making with match
 //
 // Program requirements:
-// * Display "it's true" or "it's false" based on the value of a variable
+// * Display "one", "two", "three", or "other" based on whether
+//   the value of a variable is 1, 2, 3, or some other number,
+//   respectively
 //
 // Notes:
-// * Use a variable set to either true or false
+// * Use a variable set to any integer
 // * Use a match expression to determine which message to display
+// * Use an underscore (_) to match on any value
 
 fn main() {
-    let val = true;
+    let val = 6;
     match val {
-        true => println!("it's true"),
-        false => println!("it's false")
-    };
+        1 => println!("one"),
+        2 => println!("two"),
+        3 => println!("three"),
+        _ => println!("other"),
+    }
 }
 
