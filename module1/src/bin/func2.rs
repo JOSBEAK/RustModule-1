@@ -8,4 +8,11 @@
 // * Use a function to display the result
 // * Use the "{:?}" token in the println macro to display the result
 
-fn main() {}
+fn main() {
+let num1 = 5;
+let num2 = 7;
+println!("{:?}",sum(num1,num2));
+}
+fn sum(val1:i32, val2:i32) -> i32 {
+    val1 + val2
+}
