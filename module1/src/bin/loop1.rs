@@ -13,4 +13,15 @@
 
 
 
-fn main() {}
+fn main() {
+    let mut val = 1;
+    loop {
+        if val == 5
+        {
+            break;
+        }
+        println!("{}",val);
+        val = val + 1;
+
+    }
+}
