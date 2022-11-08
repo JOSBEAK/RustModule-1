@@ -1,4 +1,4 @@
-
+#![allow(unreachable_code)]
 // DON'T let `println!` works
 fn main() {
     never_return();
@@ -8,6 +8,6 @@ fn main() {
 
 fn never_return() -> ! {
     // Implement this function, don't modify the fn signatures
-      
+     loop { }
 }
     
