@@ -13,10 +13,11 @@ fn main() {
     }
 
     let mut names = vec!["Bob", "Frank", "Ferris"];
-
-    iter(names);
     iter_mut(&mut names);
-    into_iter(names); // consumes names    
+    into_iter(&mut names);
+    iter(names);
+    // iter_mut(&mut names);
+    // into_iter(names); // consumes names    
 }
 
 fn iter(names: Vec<&str>) {
@@ -37,10 +38,10 @@ fn iter_mut(names: &mut Vec<&str>) {
     }
 }
 
-fn into_iter(names: Vec<&str>) {
+fn into_iter(names: &mut Vec<&str>) {
     for name in names.into_iter() { // starting from here name is moved
         match name {
-            "Ferris" => println!("There is a rustacean among us!"),
+            &mut "Ferris" => println!("There is a rustacean among us!"),
             _ => println!("Hello {}", name),
         }
     }
